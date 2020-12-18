@@ -50,28 +50,28 @@ private:
         Word value;
         struct
         {
-            // Negative flag: indicates if the result of an
-            // arithmetic operation returns a negative result
-            bool N : 1;
-            // Overflow flag: indicates if the result of an
-            // arithmetic operation overflows the 8 bit limit
-            bool V : 1;
-            // Unused flag
-            bool U : 1;
-            // Break command: set when the BRK instruction
-            // has been executed
-            bool B : 1;
-            // Decimal mode: unsupported by the nes
-            bool D : 1;
-            // Disable interrupt: while this flag is set the cpu
-            // ignores all interrupt request (except for NMI)
-            bool I : 1;
-            // Zero flag: indicates if the result of an
-            // arithmetic operation returns a null result
-            bool Z : 1;
             // Carry flag: contains the overflowed bit caused by
             // an arithmetic operation
             bool C : 1;
+            // Zero flag: indicates if the result of an
+            // arithmetic operation returns a null result
+            bool Z : 1;
+        	// Disable interrupt: while this flag is set the cpu
+            // ignores all interrupt request (except for NMI)
+            bool I : 1;
+            // Decimal mode: unsupported by the nes
+            bool D : 1;
+            // Break command: set when the BRK instruction
+            // has been executed
+            bool B : 1;
+            // Unused flag
+            bool U : 1;
+            // Overflow flag: indicates if the result of an
+            // arithmetic operation overflows the 8 bit limit
+            bool V : 1;
+            // Negative flag: indicates if the result of an
+            // arithmetic operation returns a negative result
+            bool N : 1;
         };
     } m_Status;
 
